@@ -4,7 +4,7 @@
 ## Intro
 **javafx-multi-scene-fxml** uses a static Map in Main with FxmlInfo as the value and the SceneName as the key.  SceneName is an enum with the name of each Scene.  FxmlInfo is a class that holds all the data needed to load an FXML file into a Scene and holds that Scene once it's loaded.
 
-Scenes are loaded lazily, that is, only when needed.  A Scene is built the first, then all subsequent calls load the build Scene.
+Scenes are loaded lazily, that is, only when needed.  A Scene is built the first, then all subsequent calls load the built Scene.
 
 The Stage is injected from Main into each View and from there into each controller.  This combination of FxmlInfo Map and Stage provides all the control need for each Scene.
 
