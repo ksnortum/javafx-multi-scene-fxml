@@ -29,10 +29,9 @@
 			<!-- Compiling -->
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.7.0</version>
+				<version>3.8.0</version>
 				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
+					<release>11</release>
 				</configuration>
 			</plugin>
 
@@ -60,6 +59,16 @@
 			<id>log4j</id>
 			<url>https://mvnrepository.com/artifact/log4j/log4j</url>
 		</repository>
+		
+		<repository>
+			<id>JavaFX</id>
+			<url>https://mvnrepository.com/artifact/org.openjfx/javafx-controls</url>
+		</repository>
+		
+		<repository>
+			<id>JavaFX-FXML</id>
+			<url>https://mvnrepository.com/artifact/org.openjfx/javafx-fxml</url>
+		</repository>		
 	</repositories>
 
 	<dependencies>
@@ -69,6 +78,20 @@
 			<artifactId>log4j</artifactId>
 			<version>1.2.17</version>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.openjfx/javafx-controls -->
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-controls</artifactId>
+			<version>11</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.openjfx/javafx-fxml -->
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-fxml</artifactId>
+			<version>11</version>
+		</dependency>		
 	</dependencies>
 
 	<reporting>

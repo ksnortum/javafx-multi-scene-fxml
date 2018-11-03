@@ -17,10 +17,10 @@ import net.snortum.javafx.multiscenefxml.util.FxmlInfo;
  */
 public class Main extends Application {
 	
-	private static final String MAIN_FXML = "/net/snortum/javafx/multiscenefxml/controller/main-view.fxml";
-	private static final String SCENE_ONE_FXML = "/net/snortum/javafx/multiscenefxml/controller/scene-one.fxml";
-	private static final String SCENE_TWO_FXML = "/net/snortum/javafx/multiscenefxml/controller/scene-two.fxml";
-	private static final String SCENE_THREE_FXML = "/net/snortum/javafx/multiscenefxml/controller/scene-three.fxml";
+	private static final String MAIN_FXML = "/net/snortum/javafx/multiscenefxml/view/main-view.fxml";
+	private static final String SCENE_ONE_FXML = "/net/snortum/javafx/multiscenefxml/view/scene-one.fxml";
+	private static final String SCENE_TWO_FXML = "/net/snortum/javafx/multiscenefxml/view/scene-two.fxml";
+	private static final String SCENE_THREE_FXML = "/net/snortum/javafx/multiscenefxml/view/scene-three.fxml";
 
 	/** Holds the information for various scenes to switch between */
 	private static Map<SceneName, FxmlInfo> scenes = new HashMap<>();
