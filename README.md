@@ -9,19 +9,17 @@ Scenes are loaded lazily, that is, only when needed.  A Scene is built the first
 The Stage is injected from Main into each View and from there into each controller.  This combination of FxmlInfo Map and Stage provides all the control need for each Scene.
 
 ## Requirements
-**javafx-multi-scene** will run on Java 8 or above.
+**javafx-multi-scene** runs on Java 11 or above.  If you want to run on a version of Java lower that 11, checkout the `pre-javafx-11` branch.
 
 ## Launching
 Launch **javafx-multi-scene** from your favorite IDE, or with [Maven](https://maven.apache.org/):
 
-    mvn exec:java
+    mvn compile exec:java
 
 ## What to notice
-When the application launches, you are presented to the main view, with buttons for three separate scenes and a close button.  Press a scene button and you will go to one of three different scenes.  Each scene also has a close button, which is possible because the stage from Main is injected into each.  
+When the application launches, you are presented to the main view, with buttons for three separate scenes and a close button.  Press a scene button and you will go to one of three different scenes.  Each scene also has a close button, which is possible because the stage from Main is injected into each.  On the console you can see that each scene is loaded only once and only when needed.
 
 ## Bugs, improvements
- - There is a bug in JavaFX such that you must put the FXML files in the same package as the controllers.
-
 Fork the repository and submit a pull request, or email knute (at) snortum (dot) net.
 
 ## See Also
