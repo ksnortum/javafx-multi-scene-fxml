@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="160.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.snortum.javafx.multiscenefxml.controller.MainController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.snortum.javafx.multiscenefxml.controller.MainController">
    <left>
-      <VBox prefHeight="115.0" prefWidth="80.0" BorderPane.alignment="CENTER">
+      <VBox BorderPane.alignment="CENTER">
          <children>
             <Button mnemonicParsing="false" onAction="#handleOnActionSceneOne" text="Scene 1" />
             <Button mnemonicParsing="false" onAction="#handleOnActionSceneTwo" text="Scene 2">
@@ -26,7 +26,7 @@
       </VBox>
    </left>
    <bottom>
-      <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <ButtonBar BorderPane.alignment="CENTER">
         <buttons>
           <Button mnemonicParsing="false" onAction="#handleOnActionClose" text="Close" />
         </buttons>
@@ -36,7 +36,7 @@
       </ButtonBar>
    </bottom>
    <center>
-      <Label prefHeight="53.0" prefWidth="206.0" text=" Main Scene" textAlignment="JUSTIFY" BorderPane.alignment="CENTER">
+      <Label text=" Main Scene" textAlignment="JUSTIFY" BorderPane.alignment="CENTER">
          <font>
             <Font size="36.0" />
          </font>
