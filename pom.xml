@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>net.snortum.javafx.multiscenefxml</groupId>
 	<artifactId>javafx-multi-scene-fxml</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<name>javafx-multi-scene-fxml</name>
 	<description>Demo of one way to use FXML in a multi-scene environment</description>
 
@@ -13,17 +13,6 @@
 	</properties>
 
 	<build>
-		<sourceDirectory>src</sourceDirectory>
-
-		<resources>
-			<resource>
-				<directory>src</directory>
-				<excludes>
-					<exclude>**/*.java</exclude>
-				</excludes>
-			</resource>
-		</resources>
-
 		<plugins>
 
 			<!-- Compiling -->
