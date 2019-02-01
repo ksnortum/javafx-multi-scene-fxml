@@ -1,9 +1,10 @@
 package net.snortum.javafx.multiscenefxml.util;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
-import org.apache.log4j.Logger;
 
 import net.snortum.javafx.multiscenefxml.model.SceneName;
 
@@ -20,11 +21,11 @@ import net.snortum.javafx.multiscenefxml.model.SceneName;
  * After that, the loaded scene is looked and returned.
  * 
  * @author Knute Snortum
- * @version 2018-05-28
+ * @version 2019-01-30
  */
 public class FxmlInfo {
 	
-	private static Logger LOG = Logger.getLogger(FxmlInfo.class);
+	private static Logger logger = LogManager.getLogger();
 	
 	private String resourceName;
 	private SceneName sceneName;
@@ -67,8 +68,8 @@ public class FxmlInfo {
 	public Scene getScene() {
 		if (scene == null) {
 			scene = new FxmlLoad().load(this);
-			if (LOG.isInfoEnabled()) {
-				LOG.info(sceneName + " has been built");
+			if (logger.isInfoEnabled()) {
+				logger.info("{} has been built", sceneName);
 			}
 		}
 		return scene;

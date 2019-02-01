@@ -4,11 +4,12 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Enumeration;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-
-import org.apache.log4j.Logger;
 
 import net.snortum.javafx.multiscenefxml.Main;
 import net.snortum.javafx.multiscenefxml.model.Stageable;
@@ -17,11 +18,11 @@ import net.snortum.javafx.multiscenefxml.model.Stageable;
  * Deals with loading FXML files and updating the scenes MAP in {@link Main}.
  * 
  * @author Knute Snortum
- * @version 2018-06-06
+ * @version 2019-01-30
  */
 public class FxmlLoad {
 	
-	private static Logger LOG = Logger.getLogger(FxmlLoad.class);
+	private static Logger logger = LogManager.getLogger();
 
 	/**
 	 * Either builds the scene from {@link FxmlInfo} or loads the built scene.<br>
@@ -41,10 +42,7 @@ public class FxmlLoad {
 		URL url = getClass().getResource(fxmlInfo.getResourceName());
 
 		if (url == null) {
-			String message = "The URL for the resource \""
-					+ fxmlInfo.getResourceName()
-					+ "\" was not found";
-			LOG.error(message);
+			logger.error("The URL for the resource \"{}\" was not found", fxmlInfo.getResourceName());
 			debugInfo(fxmlInfo.getResourceName()); // not required
 			Platform.exit();
 			return null;
@@ -75,12 +73,12 @@ public class FxmlLoad {
 
 	// This method isn't required, but it can help figure out why an FXML file isn't loading
 	private void debugInfo(String resourceName) {
-		LOG.error("Working Directory = " + System.getProperty("user.dir"));
-		LOG.error("Resources for " + resourceName);
+		logger.error("Working Directory = {}", System.getProperty("user.dir"));
+		logger.error("Resources for {}", resourceName);
 		try {
 			Enumeration<URL> urls = ClassLoader.getSystemClassLoader().getResources(resourceName);
 			while (urls.hasMoreElements()) {
-				LOG.error(urls.nextElement());
+				logger.error(urls.nextElement());
 			}
 		} catch (IOException e) {
 			e.printStackTrace();

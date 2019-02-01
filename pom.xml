@@ -45,29 +45,31 @@
 
 	<repositories>
 		<repository>
-			<id>log4j</id>
-			<url>https://mvnrepository.com/artifact/log4j/log4j</url>
-		</repository>
-		
-		<repository>
 			<id>JavaFX</id>
 			<url>https://mvnrepository.com/artifact/org.openjfx/javafx-controls</url>
 		</repository>
-		
+
 		<repository>
 			<id>JavaFX-FXML</id>
 			<url>https://mvnrepository.com/artifact/org.openjfx/javafx-fxml</url>
-		</repository>		
+		</repository>
 	</repositories>
 
 	<dependencies>
-		<!-- https://mvnrepository.com/artifact/log4j/log4j -->
+		<!-- Logging -->
 		<dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-			<version>1.2.17</version>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>2.11.1</version>
 		</dependency>
-		
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.11.1</version>
+		</dependency>
+
+		<!-- JavaFX -->
+
 		<!-- https://mvnrepository.com/artifact/org.openjfx/javafx-controls -->
 		<dependency>
 			<groupId>org.openjfx</groupId>
@@ -80,7 +82,7 @@
 			<groupId>org.openjfx</groupId>
 			<artifactId>javafx-fxml</artifactId>
 			<version>11</version>
-		</dependency>		
+		</dependency>
 	</dependencies>
 
 	<reporting>
