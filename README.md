@@ -14,7 +14,7 @@ The Stage is injected from Main into each View and from there into each controll
 ## Launching
 Launch **javafx-multi-scene** from your favorite IDE, or with [Maven](https://maven.apache.org/):
 
-    mvn compile exec:java
+    mvn clean compile exec:java
 
 ## What to notice
 When the application launches, you are presented to the main view, with buttons for three separate scenes and a close button.  Press a scene button and you will go to one of three different scenes.  Each scene also has a close button, which is possible because the stage from Main is injected into each.  On the console you can see that each scene is loaded only once and only when needed.
