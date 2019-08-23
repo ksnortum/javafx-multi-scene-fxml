@@ -4,7 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.stage.Stage;
 
-import net.snortum.javafx.multiscenefxml.Main;
+import net.snortum.javafx.multiscenefxml.SceneFxmlApp;
 import net.snortum.javafx.multiscenefxml.model.SceneName;
 import net.snortum.javafx.multiscenefxml.model.Stageable;
 
@@ -25,7 +25,7 @@ public class SceneOneController implements Stageable {
 	
 	/** Back to the main scene */
 	@FXML private void handleOnActionBackButton(ActionEvent event) {
-		stage.setScene(Main.getScenes().get(SceneName.MAIN).getScene());
+		stage.setScene(SceneFxmlApp.getScenes().get(SceneName.MAIN).getScene());
 	}
 	
 	/** 

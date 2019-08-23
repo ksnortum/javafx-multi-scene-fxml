@@ -4,7 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.stage.Stage;
 
-import net.snortum.javafx.multiscenefxml.Main;
+import net.snortum.javafx.multiscenefxml.SceneFxmlApp;
 import net.snortum.javafx.multiscenefxml.model.SceneName;
 import net.snortum.javafx.multiscenefxml.model.Stageable;
 
@@ -25,17 +25,17 @@ public class MainController implements Stageable {
 
 	/** Display the first scene */
 	@FXML private void handleOnActionSceneOne(ActionEvent event) {
-		stage.setScene(Main.getScenes().get(SceneName.SCENE1).getScene());
+		stage.setScene(SceneFxmlApp.getScenes().get(SceneName.SCENE1).getScene());
 	}
 	
 	/** Display the second scene */
 	@FXML private void handleOnActionSceneTwo(ActionEvent event) {
-		stage.setScene(Main.getScenes().get(SceneName.SCENE2).getScene());
+		stage.setScene(SceneFxmlApp.getScenes().get(SceneName.SCENE2).getScene());
 	}
 	
 	/** Display the third scene */
 	@FXML private void handleOnActionSceneThree(ActionEvent event) {
-		stage.setScene(Main.getScenes().get(SceneName.SCENE3).getScene());
+		stage.setScene(SceneFxmlApp.getScenes().get(SceneName.SCENE3).getScene());
 	}
 	
 	/** 

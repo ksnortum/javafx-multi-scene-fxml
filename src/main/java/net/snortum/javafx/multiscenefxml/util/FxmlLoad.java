@@ -11,11 +11,11 @@ import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 
-import net.snortum.javafx.multiscenefxml.Main;
+import net.snortum.javafx.multiscenefxml.SceneFxmlApp;
 import net.snortum.javafx.multiscenefxml.model.Stageable;
 
 /**
- * Deals with loading FXML files and updating the scenes MAP in {@link Main}.
+ * Deals with loading FXML files and updating the scenes MAP in {@link SceneFxmlApp}.
  * 
  * @author Knute Snortum
  * @version 2019-01-30
@@ -61,7 +61,7 @@ public class FxmlLoad {
 		
 		// Write back the updated FxmlInfo to the scenes Map in Main
 		fxmlInfo.setScene(scene);
-		Main.updateScenes(fxmlInfo.getSceneName(), fxmlInfo);
+		SceneFxmlApp.updateScenes(fxmlInfo.getSceneName(), fxmlInfo);
 		
 		Stageable controller = loader.getController();
 		if (controller != null) {

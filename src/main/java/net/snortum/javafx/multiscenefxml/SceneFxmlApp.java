@@ -10,12 +10,16 @@ import net.snortum.javafx.multiscenefxml.model.SceneName;
 import net.snortum.javafx.multiscenefxml.util.FxmlInfo;
 
 /**
- * Sets all scene info into a Map and displays the main scene
+ * Sets all scene info into a Map and displays the main scene.
+ * <p>
+ * Note: This class should be launched with these VM flags:
+ * <p>
+ * {@code --module-path /path/to/javafx-sdk-11.0.2/lib --add-modules javafx.controls,javafx.fxml}
  * 
  * @author Knute Snortum
- * @version 2018-05-24
+ * @version 2019-08-23
  */
-public class Main extends Application {
+public class SceneFxmlApp extends Application {
 	
 	private static final String MAIN_FXML = "/fxml/main-view.fxml";
 	private static final String SCENE_ONE_FXML = "/fxml/scene-one.fxml";
