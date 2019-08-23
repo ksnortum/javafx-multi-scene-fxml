@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="160.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.snortum.javafx.multiscenefxml.controller.SceneTwoController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="160.0" prefWidth="300.0" styleClass="pane" stylesheets="@../css/scene3.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.snortum.javafx.multiscenefxml.controller.SceneTwoController">
    <bottom>
       <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
         <buttons>
@@ -20,7 +20,7 @@
       </ButtonBar>
    </bottom>
    <center>
-      <Label alignment="CENTER" prefHeight="53.0" prefWidth="206.0" text="Scene Three" textAlignment="JUSTIFY" BorderPane.alignment="CENTER">
+      <Label alignment="CENTER" prefHeight="53.0" prefWidth="236.0" text="Scene Three" textAlignment="JUSTIFY" BorderPane.alignment="CENTER">
          <font>
             <Font size="36.0" />
          </font>
